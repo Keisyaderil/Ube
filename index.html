@@ -3,17 +3,166 @@
 <head>
   <meta charset="UTF-8">
   <title>Sweet Ube</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@1,600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <style>
+    /* Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      background: radial-gradient(circle at top, #0b1d51 0%, #050c24 100%);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      color: white;
+      position: relative;
+    }
+
+    /* Untuk memastikan font 'Josefin Sans' digunakan */
+    .my-custom-class {
+      font-family: "Josefin Sans", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: italic;
+    }
+
+    .rubik-arab {
+      font-family: "Rubik", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+    }
+
+    /* Gambar bintang manual */
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.9;
+      box-shadow: 0 0 8px 4px rgba(255, 255, 255, 0.5);
+      animation: twinkle 2s infinite alternate;
+      z-index: 1; /* Bintang di bawah bunga dan teks */
+    }
+
+    /* Animasi kelap-kelip bintang */
+    @keyframes twinkle {
+      from { opacity: 0.6; box-shadow: 0 0 4px 2px rgba(255, 255, 255, 0.3); }
+      to { opacity: 1; box-shadow: 0 0 10px 5px rgba(255, 255, 255, 0.8); }
+    }
+
+    /* Container utama */
+    .container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      z-index: 3; /* Di atas background */
+    }
+
+    h1 {
+      font-size: 36px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+
+    /* Bunga */
+    .flower {
+      position: relative;
+      width: 120px;
+      height: 120px;
+      animation: rotateFlower 12s infinite linear;
+      z-index: 2; /* Bunga di atas background dan bintang */
+    }
+
+    .petal {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #ff66cc, #cc00ff);
+      border-radius: 50% 50% 0 0;
+      transform-origin: bottom center;
+    }
+
+    .petal:nth-child(1) { transform: rotate(0deg) translateY(-50px); }
+    .petal:nth-child(2) { transform: rotate(60deg) translateY(-50px); }
+    .petal:nth-child(3) { transform: rotate(120deg) translateY(-50px); }
+    .petal:nth-child(4) { transform: rotate(180deg) translateY(-50px); }
+    .petal:nth-child(5) { transform: rotate(240deg) translateY(-50px); }
+    .petal:nth-child(6) { transform: rotate(300deg) translateY(-50px); }
+
+    .center {
+      position: absolute;
+      top: 45px;
+      left: 45px;
+      width: 30px;
+      height: 30px;
+      background: yellow;
+      border-radius: 50%;
+      box-shadow: 0 0 15px rgba(255, 255, 100, 0.8);
+    }
+
+    @keyframes rotateFlower {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .flower-text {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .flower-image {
+      margin-top: 20px;
+      width: 150px;
+      height: 150px;
+      border-radius: 10px;
+      z-index: 3; /* Gambar di atas bunga dan latar belakang */
+    }
+  </style>
 </head>
+
 <body>
+  <div class="star" style="top: 8%; left: 18%; width: 5px; height: 5px;"></div>
+  <div class="star" style="top: 25%; left: 75%; width: 6px; height: 6px;"></div>
+  <div class="star" style="top: 48%; left: 38%; width: 4px; height: 4px;"></div>
+  <div class="star" style="top: 15%; left: 82%; width: 5px; height: 5px;"></div>
+  <div class="star" style="top: 58%; left: 12%; width: 5px; height: 5px;"></div>
+  <div class="star" style="top: 78%; left: 48%; width: 6px; height: 6px;"></div>
+  <div class="star" style="top: 35%; left: 60%; width: 4px; height: 4px;"></div>
+  <div class="star" style="top: 70%; left: 25%; width: 5px; height: 5px;"></div>
+
+  <!-- Isi utamamu -->
   <div class="container">
-    <!-- Teks di atas bunga -->
-    <h1>H A L L O</h1>
-    <h1>SEMANGAT PKL ABANG AYUK BENGKULU</h1>
+    <h1 class="my-custom-class"> Selamat! Hari Senin Sudah Terlewati! </h1>
+    <p class="rubik-arab">-عظيم إخوانه</p>
     <h1> </h1>
-    <p> </p>
-  
-    <!-- Bunga berputar -->
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+
+
     <div class="flower">
       <div class="petal"></div>
       <div class="petal"></div>
@@ -23,12 +172,19 @@
       <div class="petal"></div>
       <div class="center"></div>
     </div>
-  
-    <!-- Tambahkan tulisan di bawah bunga -->
-    <p class="flower-text">🌸 have a good day 🌸</p>
-  
-    <!-- Tambahkan gambar di bawah tulisan -->
-    <img src="upin.jpg" alt="Gambar Hiasan" class="flower-image">
+
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+    <h1> </h1>
+    <p class="rubik-arab">-chill bro 🤟</p>
+
+
+    <img src="chill.jpg" alt="Gambar Hiasan" class="flower-image">
   </div>
 </body>
 </html>
